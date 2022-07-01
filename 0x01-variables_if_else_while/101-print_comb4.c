@@ -8,19 +8,24 @@
 
 int main(void)
 {
+	int hundreds;
 	int tens;
 	int ones;
 
-	for (tens = 0; tens <= 9; tens++)
+	for (hundreds = 0; hundreds <= 9; hundreds++)
 	{
-		for (ones = 0; ones <= 9; ones++)
+		for (tens = 0; tens <= 9; tens++)
 		{
-			putchar(tens + '0');
-			putchar(ones + '0');
-			if (!(tens == 9 && ones == 9))
+			for (ones = 0; ones <= 9; ones++)
 			{
-				putchar(',');
-				putchar(' ');
+				putchar(hundreds + '0');
+				putchar(tens + '0');
+				putchar(ones + '0');
+				if (!(hundreds == 9 && tens == 9 && ones == 9))
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
