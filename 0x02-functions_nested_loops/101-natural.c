@@ -7,7 +7,7 @@
  * Returns: Always 0 (Success)
  */
 
-int natural(void)
+int main(void)
 {
 	int i;
 	unsigned long int sum3 = 0, sum5 = 0, sum = 0;
