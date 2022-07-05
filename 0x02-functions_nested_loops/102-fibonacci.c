@@ -10,8 +10,8 @@ int main(void)
 {
 	long int i, j, k, sum;
 
-	j = 1;
-	k = 2;
+	j = 0;
+	k = 1;
 
 	for (i = 0; i < 50; i++)
 	{
