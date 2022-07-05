@@ -5,7 +5,7 @@
  *
  * @n: The input is an integer
  *
- * Return : 1 if input is greater than zero, zero if input is zero, -1 if input is less than zer0
+ * Return: 1 if input is greater than zero, zero if input is zero, -1 if input is less than zer0
  */
 
 int print_sign(int n)
