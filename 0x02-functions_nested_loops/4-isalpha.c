@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isalpha - Returns 1 if the input c is a letter(uppercase or lowercase), returns 0 if otherwise.
+ * _isalpha - Returns 1 if the input c == letter, returns 0 if otherwise.
  *
  * @c: The characteer is ASCII code
  *
