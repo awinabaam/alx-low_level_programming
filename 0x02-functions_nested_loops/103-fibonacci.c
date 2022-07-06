@@ -19,7 +19,7 @@ int main(void)
 		{
 			break;
 		}
-		if ((fibsum % 2) === 0)
+		if ((fibsum % 2) == 0)
 		{
 			tot_sum += fibsum;
 		}
