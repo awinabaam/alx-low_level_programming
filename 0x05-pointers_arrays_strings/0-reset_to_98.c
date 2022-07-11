@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio>
+#include <stdio.h>
 
 /**
  * reset_to_98 - takes and pointer and updates the value it points to to 98
