@@ -9,9 +9,8 @@
  * address of the newly allocated memory
  */
 
+
 char **strtow(char *str)
-{
-	char **strtow(char *str)
 {
 	int i = 0, j = 0, k = 0;
 	int len = 0, count = 0;
