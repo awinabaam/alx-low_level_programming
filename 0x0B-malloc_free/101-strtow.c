@@ -55,9 +55,9 @@ int count_words(char *str)
 
 /**
  * strtow - function that splits a string into words
- * 
+ *
  * @str: pointer to the string for processing
- * Ks
+ *
  * Return: pointer to an array of strings
  * address of the newly allocated memory
  */
