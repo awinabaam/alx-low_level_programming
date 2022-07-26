@@ -1,13 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
-
-/**
- *
- * File: main.h
- * Author: Abdul-Mumin Awinaba
- * Description: header file containing all the function prototypes in 
- * 		the static library libmy.a
- */
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
 int _putchar(char c);
 int _islower(int c);
