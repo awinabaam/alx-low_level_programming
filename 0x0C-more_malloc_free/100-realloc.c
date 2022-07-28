@@ -1,77 +1,50 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * _realloc - function that reallocates a memory block using malloc and free
- * @ptr: pointer to the old array
- * @old_size: size of the memory space to allocate in bytes
- * @new_size: size of type
- * Return: void pointer
+ * *_realloc - reallocates a memory block using malloc and free
+ * @ptr: pointer to the memory previsouly allocated by malloc
+ * @old_size: size of the allocated memory for ptr
+ * @new_size: new size of the new memory block
+ *
+ * Return: pointer to the newly allocated memory block
  */
-
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *newptr;
+	char *ptr1;
+	char *old_ptr;
+	unsigned int i;
 
-	if (ptr == NULL)
-	{
-		newptr = malloc(new_size);
-		if (newptr == NULL)
-		{
-			free(ptr);
-			return (NULL);
-		}
-		free(ptr);
-		return (newptr);
-	}
-	if (old_size == 0)
-		return (NULL);
 	if (new_size == old_size)
 		return (ptr);
-	if (new_size == 0 && ptr != NULL)
+
+	if (new_size == 0 && ptr)
 	{
 		free(ptr);
 		return (NULL);
 	}
+
+	if (!ptr)
+		return (malloc(new_size));
+
+	ptr1 = malloc(new_size);
+	if (!ptr1)
+		return (NULL);
+
+	old_ptr = ptr;
+
+	if (new_size < old_size)
+	{
+		for (i = 0; i < new_size; i++)
+			ptr1[i] = old_ptr[i];
+	}
+
 	if (new_size > old_size)
 	{
-		newptr = malloc(new_size);
-		if (newptr == NULL)
-		{
-			free(ptr);
-			return (NULL);
-		}
-		_memcpy(newptr, ptr, old_size);
-		free(ptr);
+		for (i = 0; i < old_size; i++)
+			ptr1[i] = old_ptr[i];
 	}
-	return (newptr);
-}
 
-#include "holberton.h"
-#include <stdio.h>
-
-/**
- * _memcpy - function that copies memory area
- *
- * @dest: parameter defined in main, pointer to memory area (dest)
- * @src: parameter defined in main, pointer to another memory area (src)
- * @n: parameter defined in main, number of bytes to be copied from src
- *
- * Return: memory address of function (memory area)
- */
-
-char *_memcpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int i;
-	char *tmp = dest;
-
-	for (i = 0; i < n; i++)
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	dest = tmp;
-	return (dest);
+	free(ptr);
+	return (ptr1);
 }
