@@ -21,7 +21,7 @@ General
   - age, type = float
   - owner, type = char \*
 
-```
+```c
 julien@ubuntu:~/0x0d. structures, typedef$ cat 0-main.c
 ```
 
@@ -30,7 +30,7 @@ julien@ubuntu:~/0x0d. structures, typedef$ cat 0-main.c
 #include "dog.h"
 
 /**
- * main - check the code for Holberton School students.
+ * main - check the code.
  *
  * Return: Always 0.
  */
@@ -46,7 +46,7 @@ int main(void)
 }
 ```
 
-```
+```c
 julien@ubuntu:~/0x0d. structures, typedef$ make
 gcc -Wall -pedantic -Werror -Wextra 0-main.c -o a
 julien@ubuntu:~/0x0d. structures, typedef$ ./a
@@ -60,7 +60,7 @@ My name is Django, and I am 3.5 :) - Woof!
 - Write a function that initialize a variable of type struct dog
   - Prototype: `void init_dog(struct dog *d, char *name, float age, char *owner)`;
 
-```
+```c
 julien@ubuntu:~/0x0d. structures, typedef$ cat 1-main.c
 ```
 
@@ -69,7 +69,7 @@ julien@ubuntu:~/0x0d. structures, typedef$ cat 1-main.c
 #include "dog.h"
 
 /**
- * main - check the code for Holberton School students.
+ * main - check the code.
  *
  * Return: Always 0.
  */
@@ -83,7 +83,7 @@ int main(void)
 }
 ```
 
-```
+```c
 julien@ubuntu:~/0x0d. structures, typedef$ gcc -Wall -pedantic -Werror -Wextra 1-main.c 1-init_dog.c -o b
 julien@ubuntu:~/0x0d. structures, typedef$ ./b
 My name is Django, and I am 3.5 :) - Woof!
@@ -100,7 +100,7 @@ My name is Django, and I am 3.5 :) - Woof!
   - If an element of d is NULL, print (nil) instead of this element. (if name is NULL, print Name: (nil))
   - If d is NULL print nothing.
 
-```
+```c
 julien@ubuntu:~/0x0d. structures, typedef$ cat 2-main.c
 ```
 
@@ -109,7 +109,7 @@ julien@ubuntu:~/0x0d. structures, typedef$ cat 2-main.c
 #include "dog.h"
 
 /**
- * main - check the code for Holberton School students.
+ * main - check the code.
  *
  * Return: Always 0.
  */
@@ -125,7 +125,7 @@ int main(void)
 }
 ```
 
-```
+```c
 julien@ubuntu:~/0x0d. structures, typedef$ gcc -Wall -pedantic -Werror -Wextra 2-main.c 2-print_dog.c -o c
 julien@ubuntu:~/0x0d. structures, typedef$ ./c
 Name: Django
@@ -139,7 +139,7 @@ Owner: Jay
 
 - Define a new type dog_t as a new name for the type struct dog.
 
-```
+```c
 julien@ubuntu:~/0x0d. structures, typedef$ cat 3-main.c
 ```
 
@@ -148,7 +148,7 @@ julien@ubuntu:~/0x0d. structures, typedef$ cat 3-main.c
 #include "dog.h"
 
 /**
- * main - check the code for Holberton School students.
+ * main - check the code.
  *
  * Return: Always 0.
  */
@@ -164,7 +164,7 @@ int main(void)
 }
 ```
 
-```
+```c
 julien@ubuntu:~/0x0d. structures, typedef$ gcc -Wall -pedantic -Werror -Wextra 3-main.c -o d
 julien@ubuntu:~/0x0d. structures, typedef$ ./d
 My name is Django, and I am 3.5 :) - Woof!
@@ -179,7 +179,7 @@ My name is Django, and I am 3.5 :) - Woof!
   - You have to store a copy of name and owner
   - Return NULL if the function fails
 
-```
+```c
 julien@ubuntu:~/0x0d. structures, typedef$ cat 4-main.c
 ```
 
@@ -188,7 +188,7 @@ julien@ubuntu:~/0x0d. structures, typedef$ cat 4-main.c
 #include "dog.h"
 
 /**
- * main - check the code for Holberton School students.
+ * main - check the code.
  *
  * Return: Always 0.
  */
@@ -202,7 +202,7 @@ int main(void)
 }
 ```
 
-```
+```c
 julien@ubuntu:~/0x0d. structures, typedef$ gcc -Wall -pedantic -Werror -Wextra 4-main.c 4-new_dog.c -o e
 julien@ubuntu:~/0x0d. structures, typedef$ ./e
 My name is Django, and I am 3.5 :) - Woof!
@@ -215,7 +215,7 @@ My name is Django, and I am 3.5 :) - Woof!
 - Write a function that frees dogs.
   - Prototype: `void free_dog(dog_t *d)`;
 
-```
+```sh
 julien@ubuntu:~/0x0d. structures, typedef$ cat 5-main.c
 ```
 
@@ -224,7 +224,7 @@ julien@ubuntu:~/0x0d. structures, typedef$ cat 5-main.c
 #include "dog.h"
 
 /**
- * main - check the code for Holberton School students.
+ * main - check the code
  *
  * Return: Always 0.
  */
@@ -239,7 +239,7 @@ int main(void)
 }
 ```
 
-```
+```c
 julien@ubuntu:~/0x0d. structures, typedef$ gcc -Wall -pedantic -Werror -Wextra 5-main.c 5-free_dog.c 4-new_dog.c -o f
 julien@ubuntu:~/0x0d. structures, typedef$ valgrind ./f
 ==22840== Memcheck, a memory error detector
@@ -260,7 +260,3 @@ My name is Django, and I am 3.5 :) - Woof!
 ```
 
 ---
-
-## Author
-
-- **Pierre Beaujuge** - [PierreBeaujuge](https://github.com/PierreBeaujuge)
